@@ -2,7 +2,7 @@ import time
 import adafruit_dht
 from board import D4
 
-from sensors.SensorInterface import SensorInterface
+from pizero_sensors.SensorInterface import SensorInterface
 
 class DHT22(SensorInterface):
     """implements SensorInterface"""

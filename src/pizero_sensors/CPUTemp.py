@@ -3,7 +3,7 @@ import re
 import os
 import time
 
-from sensors.SensorInterface import SensorInterface
+from pizero_sensors.SensorInterface import SensorInterface
 
 class CPUTemp(SensorInterface):
     def get_data(self) -> list[float]:
@@ -12,4 +12,3 @@ class CPUTemp(SensorInterface):
         cpu_temp_str = temperature_command.stdout
         cpu_temp = float(re.search(r'[\d\.]+', cpu_temp_str).group())
         return [cpu_temp]
-
