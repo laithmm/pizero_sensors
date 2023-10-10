@@ -21,7 +21,6 @@ class DHT22(SensorInterface):
                 self.device.exit()
                 return [temperature, humidity]
             except RuntimeError as error:
-                # Errors happen fairly often, DHT's are hard to read, just keep going
                 print(error.args[0])
                 self.device.exit()
                 time.sleep(2.0)
