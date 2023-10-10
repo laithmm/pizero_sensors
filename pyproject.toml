@@ -1,0 +1,20 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pizero_sensors"
+version = "1.0.0"
+authors = [
+	{ name="Laith Marsden", email="laith@outlook.com" }
+]
+description = "A package for reading data from sensors attached to the Raspberry Pi Zero"
+readme = "README.md"
+requires-python = ">=3.9"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/laithmm/pizero_sensors"
