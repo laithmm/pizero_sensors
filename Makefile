@@ -1,6 +1,5 @@
 PYTHON_INTERPRETER = ./.venv/bin/python
 
-# general lifecycle
 
 init:
 	python -m venv .venv
@@ -15,7 +14,7 @@ test:
 	${PYTHON_INTERPRETER} -m unittest
 
 
-# build (for packages)
+# build
 
 build-install:
 	${PYTHON_INTERPRETER} -m pip install -r build_requirements.txt
