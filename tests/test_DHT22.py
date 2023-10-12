@@ -1,6 +1,6 @@
 import os, sys, unittest
 
-from DHT22 import DHT22
+from pizero_sensors.DHT22 import DHT22
 
 class TestDHT22(unittest.TestCase):
 

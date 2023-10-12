@@ -2,20 +2,18 @@
 requires = ["hatchling"]
 build-backend = "hatchling.build"
 
-[tool.hatch.build]
-exclude = [
-	"test*",
-]
-
 [project]
 name = "pizero_sensors"
 version = "1.0.0"
+dependencies = [
+	"adafruit-circuitpython-dht",
+]
 authors = [
 	{ name="Laith Marsden", email="laith@outlook.com" }
 ]
 description = "A package for reading data from sensors attached to the Raspberry Pi Zero"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.8"
 classifiers = [
     "Programming Language :: Python :: 3",
     "Operating System :: OS Independent",

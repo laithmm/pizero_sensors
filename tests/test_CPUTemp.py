@@ -1,6 +1,6 @@
 import os, sys, unittest
 
-from CPUTemp import CPUTemp
+from pizero_sensors.CPUTemp import CPUTemp
 
 class TestCPUTemp(unittest.TestCase):
 

@@ -3,7 +3,7 @@ import re
 import os
 import time
 
-from pizero_sensors.SensorInterface import SensorInterface
+from .SensorInterface import SensorInterface
 
 class CPUTemp(SensorInterface):
     def get_data(self) -> list[float]:
