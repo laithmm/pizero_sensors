@@ -5,7 +5,7 @@ import string
 import unittest
 from unittest.mock import MagicMock
 
-from loggers.SensorDataLogger import SensorDataLogger as SDL
+from logger.SensorDataLogger import SensorDataLogger as SDL
 from pizero_sensors.SensorInterface import SensorInterface
 
 SCRIPT_DIR = os.path.dirname(__file__)
@@ -44,7 +44,7 @@ class SensorDataLoggerTests(unittest.TestCase):
 
     def test_whenLogDataIsRequested_thenLogsAreReturnedInJSONFormat(self):
         sensor = SensorInterface()
-        log_path = f'{SCRIPT_DIR}/../fixtures/sample_dht22.csv'
+        log_path = f'{SCRIPT_DIR}/fixtures/sample_dht22.csv'
         logger = SDL(sensor, log_path)
         log_data = logger.return_log_data(1)
         self.assertEqual(len(log_data['data']), 6)

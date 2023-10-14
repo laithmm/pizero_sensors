@@ -1,8 +1,6 @@
-import os.path
 import time
 from datetime import datetime
-import csv
-from helpers.csv_helpers import *
+from .helpers.csv_helpers import *
 
 class SensorDataLogger:
     def __init__(self, sensor, log_path):
@@ -35,7 +33,7 @@ class SensorDataLogger:
             
         to_return = log_data[::-1][:num_data_points_to_return]
         if human_readable:
-            for i,data_point in enumerate(to_return):
+            for i, _ in enumerate(to_return):
                 to_return[i][0] = datetime.utcfromtimestamp(to_return[i][0]).strftime('%H:%M:%S %d-%m-%Y')
 
         return {'headings': headings, 'data': to_return}
