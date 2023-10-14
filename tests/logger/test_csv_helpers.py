@@ -1,6 +1,6 @@
 import os
 import unittest
-from logger.helpers.csv_helpers import *
+from pizero_sensors.logger.helpers.csv_helpers import *
 
 SCRIPT_DIR = os.path.dirname(__file__)
 FIXTURES_DIR = f'{SCRIPT_DIR}/fixtures'

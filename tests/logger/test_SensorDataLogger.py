@@ -5,7 +5,7 @@ import string
 import unittest
 from unittest.mock import MagicMock
 
-from logger.SensorDataLogger import SensorDataLogger as SDL
+from pizero_sensors.logger.SensorDataLogger import SensorDataLogger as SDL
 from pizero_sensors.SensorInterface import SensorInterface
 
 SCRIPT_DIR = os.path.dirname(__file__)
