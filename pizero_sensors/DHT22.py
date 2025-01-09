@@ -21,8 +21,12 @@ class DHT22(SensorInterface):
                 self.device.exit()
                 return [temperature, humidity]
             except RuntimeError as error:
-                print(error.args[0])
                 self.device.exit()
+
+                if 'sensor not found' in error.args[0]:
+                    raise error
+
+                print(f'error reading from DHT22: {error.args[0]}')
                 time.sleep(2.0)
                 continue
             except Exception as error:
